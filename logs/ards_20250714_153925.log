@@ -1,0 +1,27 @@
+2025-07-14 15:39:25,602 - ARDS - INFO - ============================================================
+2025-07-14 15:39:25,603 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:39:25,603 - ARDS - INFO - ============================================================
+2025-07-14 15:39:25,722 - ARDS - INFO - 💻 CPU: 8 çekirdek, %100.0 kullanım
+2025-07-14 15:39:25,723 - ARDS - INFO - 🧠 RAM: 8GB toplam, %71.9 kullanım
+2025-07-14 15:39:25,723 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:39:25,723 - ARDS - INFO - 💾 Sistem: CPU %22.6, RAM %71.9
+2025-07-14 15:39:25,733 - ARDS - INFO - Konfigürasyon yüklendi: configs/default.yaml
+2025-07-14 15:39:25,734 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:39:33,463 - ARDS - ERROR - ❌ Kritik hata: OpenCV(4.11.0) /Users/xperience/GHA-Actions-OpenCV/_work/opencv-python/opencv-python/opencv/modules/dnn/src/caffe/caffe_io.cpp:1138: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "models/pretrained/east_text_detection.pb" in function 'ReadProtoFromBinaryFile'
+
+2025-07-14 15:39:33,476 - ARDS - ERROR - Traceback (most recent call last):
+  File "/Users/murathan/ARDS/src/main.py", line 106, in main
+    object_detector = ObjectDetector(config.detection_config)
+  File "/Users/murathan/ARDS/src/detection/object_detector.py", line 42, in __init__
+    self.street_detector = StreetDetector(config.get('street_config', {}))
+  File "/Users/murathan/ARDS/src/detection/street_detector.py", line 24, in __init__
+    self.text_detector = cv2.dnn.readNet(
+cv2.error: OpenCV(4.11.0) /Users/xperience/GHA-Actions-OpenCV/_work/opencv-python/opencv-python/opencv/modules/dnn/src/caffe/caffe_io.cpp:1138: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "models/pretrained/east_text_detection.pb" in function 'ReadProtoFromBinaryFile'
+
+
+2025-07-14 15:39:33,477 - ARDS - INFO - 🧹 Sistem kapatılıyor...
+2025-07-14 15:39:34,599 - ARDS - INFO - 🎯 Performans Raporu:
+2025-07-14 15:39:34,600 - ARDS - INFO - 💾 Sistem: CPU %18.3, RAM %85.4
+2025-07-14 15:39:34,600 - ARDS - INFO - 🎮 Kamera: Target FPS: 30.0, Actual FPS: 0.0
+2025-07-14 15:39:34,600 - ARDS - INFO - 🧠 AI Sınıflandırıcı: Model: ModelComplexity.MEDIUM, Performans: {'avg_inference_time_ms': 0, 'avg_memory_mb': 0}
+2025-07-14 15:39:35,718 - ARDS - INFO - ✅ ARDS sistemi kapatıldı

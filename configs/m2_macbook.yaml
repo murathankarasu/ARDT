@@ -1,0 +1,256 @@
+# ARDS - MacBook Pro M2 Optimize Konfigürasyonu
+# Apple M2 (8 cores) + 8GB RAM + MPS + Neural Engine optimizasyonu
+
+# Kamera ayarları - M2 için optimize
+camera:
+  # Yüksek kalite ama RAM dostu
+  default_resolution: [1920, 1080]  # Full HD
+  default_fps: 30  # Akıcı performans
+  buffer_size: 2  # M2 için optimize
+  auto_exposure: true
+  auto_white_balance: true
+  
+  # Adaptif kamera etkin
+  adaptive_enabled: true
+  
+  # Post-processing aktif (M2 güçlü)
+  post_processing:
+    enabled: true
+    clahe_enabled: true
+    noise_reduction: true
+    sharpening: true
+
+# Nesne tespiti - M2 optimized
+detection:
+  # Çoklu model - M2 destekleyebilir
+  enabled_detectors: ["yolo", "mediapipe"]
+  
+  # YOLO ayarları - M2 için medium model
+  yolo:
+    model_variant: "yolov8s"  # Small model (medium performans)
+    confidence_threshold: 0.5  # Dengeli threshold
+    nms_threshold: 0.45
+    max_detections: 10  # M2 için uygun
+    input_size: [640, 640]  # Standart boyut
+    half_precision: true  # MPS için FP16
+    device: "mps"  # Apple Metal Performance Shaders
+    
+  # MediaPipe aktif
+  mediapipe:
+    enabled: true
+    model_complexity: 1  # Orta seviye
+    
+  # Dlib devre dışı (8GB RAM için)
+  dlib:
+    enabled: false
+
+# AI Sınıflandırıcı - M2 optimize
+ai_classifier:
+  # Otomatik model seçimi
+  auto_select_model: true
+  
+  # MEDIUM komplexity zorla (M2 için ideal)
+  force_model_complexity: "medium"
+  
+  # Model tercihleri
+  models:
+    clip_enabled: true
+    efficientnet_enabled: true
+    resnet_enabled: true  # M2 destekleyebilir
+    
+  # CLIP ayarları
+  clip:
+    model_name: "openai/clip-vit-base-patch32"
+    device: "mps"
+    half_precision: true
+    
+  # EfficientNet ayarları
+  efficientnet:
+    model_name: "efficientnet_b2"
+    input_size: [224, 224]
+    batch_size: 1
+    half_precision: true
+    device: "mps"
+    
+  # ResNet ayarları
+  resnet:
+    model_name: "resnet34"  # Hafif version
+    device: "mps"
+    half_precision: true
+    
+  # Ensemble etkin
+  ensemble:
+    enabled: true
+    weights:
+      clip: 0.4
+      efficientnet: 0.4
+      resnet: 0.2
+
+# Dikkat takibi - Sınırlı (8GB RAM)
+attention:
+  # Gaze tracking etkin ama hafif
+  gaze_tracking:
+    enabled: true
+    model_complexity: 0  # En hafif
+    
+  # MediaPipe yüz tespiti
+  mediapipe:
+    enabled: true
+    max_num_faces: 1  # Tek kişi
+    model_complexity: 0
+    
+  # Attention analysis basit seviye
+  attention_analysis:
+    enabled: true
+    complexity: "simple"
+
+# Analytics - Dengeli
+analytics:
+  # Orta seviye batch processing
+  batch_size: 10
+  upload_interval: 120  # 2 dakika
+  
+  # Orta seviye metrikler
+  collect_detailed_metrics: true
+  
+  # Firebase optimizasyonu
+  firebase:
+    offline_cache: true
+    compression: true
+    
+# Performans optimizasyonu - M2 özel
+performance:
+  # Sistem izleme etkin
+  system_monitoring:
+    enabled: true
+    interval: 1.0  # 1 saniye
+    
+  # CPU optimizasyonu - M2 için
+  cpu:
+    max_threads: 6  # 8 çekirdekten 6'sını kullan
+    priority: "normal"
+    performance_cores: 4  # P-core'ları tercih et
+    efficiency_cores: 2   # E-core'ları da kullan
+    
+  # Memory optimizasyonu - 8GB için kritik
+  memory:
+    cache_size: 50  # Orta cache
+    garbage_collection: "moderate"
+    clear_interval: 30  # 30 saniye
+    max_usage_percent: 75  # %75 max RAM
+    
+  # GPU optimizasyonu - MPS
+  gpu:
+    device: "mps"  # Metal Performance Shaders
+    memory_growth: true
+    memory_limit: 6144  # 6GB (sistem için 2GB bırak)
+    fallback_to_cpu: true  # Gerekirse CPU'ya geç
+    
+  # Frame işleme - M2 optimize
+  frame_processing:
+    # Frame atlama adaptif
+    skip_frames: false  # M2 güçlü
+    skip_ratio: 0.0
+    
+    # Adaptif quality
+    adaptive_quality: true
+    quality_step: 0.05
+    min_quality: 0.3
+    
+    # Timeout
+    processing_timeout: 0.2  # 200ms
+
+# İşlem yoğunluğu ayarları
+processing_intensity:
+  # Varsayılan orta-yüksek (M2 için)
+  default: 0.7
+  
+  # Otomatik ayarlama
+  auto_adjust: true
+  adjustment_interval: 3.0
+  
+  # Threshold'lar
+  low_threshold: 0.3
+  medium_threshold: 0.6
+  high_threshold: 0.8
+  
+  # Thermal management
+  thermal_management:
+    enabled: true
+    max_temperature: 85  # M2 için uygun
+    throttle_threshold: 80
+    
+# M2 özel optimizasyonlar
+apple_silicon:
+  # Neural Engine kullanımı
+  neural_engine:
+    enabled: true
+    priority: "low"  # AI model'lere öncelik verme
+    
+  # Metal optimizasyonları
+  metal:
+    enabled: true
+    performance_mode: true
+    memory_optimizations: true
+    
+  # Unified Memory optimizasyonları
+  unified_memory:
+    enabled: true
+    smart_allocation: true
+    
+# Logging - Geliştirme için
+logging:
+  level: "INFO"
+  file_logging: true
+  console_logging: true
+  
+  # Performans logging'i etkin
+  performance_logging: true
+  
+# Debugging - Geliştirme için
+debug:
+  enabled: true
+  visualization: true
+  save_frames: false  # RAM tasarrufu
+  profiling: true
+
+# MacBook özel ayarlar
+macbook:
+  # Pil optimizasyonu
+  battery_optimization: true
+  
+  # Thermal throttling
+  thermal_throttling: true
+  
+  # Power management
+  power_management:
+    enabled: true
+    modes:
+      battery: "balanced"
+      plugged_in: "performance"
+    
+# Donanım profili
+hardware_profile:
+  name: "MacBook Pro M2 8GB"
+  cpu_cores: 8
+  performance_cores: 4
+  efficiency_cores: 4
+  memory_gb: 8
+  gpu: "Apple M2 GPU (8-core)"
+  neural_engine: "16-core Neural Engine"
+  memory_bandwidth: "100 GB/s"
+  
+# Model indirme ayarları
+model_download:
+  # Otomatik indirme
+  auto_download: true
+  
+  # İndirme öncelikleri
+  priority_models:
+    - "yolov8s.pt"
+    - "efficientnet_b2"
+    - "clip-vit-base-patch32"
+  
+  # Cache ayarları
+  cache_dir: "models/cache"
+  max_cache_size_gb: 2  # 8GB sistemde 2GB cache 

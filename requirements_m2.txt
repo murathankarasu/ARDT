@@ -1,0 +1,72 @@
+# MacBook Pro M2 (Apple Silicon) için optimize edilmiş requirements
+# Apple Silicon M2 + 8GB RAM + Neural Engine optimizasyonu
+
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# Deep Learning - Apple Silicon optimized
+# PyTorch with MPS (Metal Performance Shaders) support
+torch>=2.1.0
+torchvision>=0.16.0
+# TensorFlow Metal for M1/M2
+tensorflow-macos>=2.13.0
+tensorflow-metal>=1.0.0
+
+# YOLO - lightweight for M2
+ultralytics>=8.0.0
+
+# Transformer models - optimized
+transformers>=4.30.0
+timm>=0.9.0
+
+# Computer Vision & AI - M2 compatible
+mediapipe>=0.10.0
+
+# Skip heavy dependencies for M2 8GB RAM
+# face-recognition>=1.3.0  # Skip - heavy for 8GB
+# dlib>=19.24.0  # Skip - heavy compilation
+scikit-image>=0.21.0
+albumentations>=1.3.0
+
+# Data Processing
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scipy>=1.11.0
+
+# Firebase & Cloud
+firebase-admin>=6.2.0
+google-cloud-firestore>=2.11.0
+google-cloud-storage>=2.10.0
+
+# Web Framework (Optional - lightweight)
+flask>=2.3.0
+# fastapi>=0.100.0  # Skip for lighter install
+# uvicorn>=0.23.0   # Skip for lighter install
+# websockets>=11.0  # Skip for lighter install
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
+tqdm>=4.65.0
+requests>=2.31.0
+psutil>=5.9.0
+GPUtil>=1.4.0
+
+# Development - minimal
+pytest>=7.4.0
+# black>=23.0.0     # Skip for lighter install
+# flake8>=6.0.0     # Skip for lighter install
+# jupyter>=1.0.0    # Skip for lighter install
+
+# Performance & Optimization - Apple Silicon
+numba>=0.57.0
+# ONNX for Apple Silicon
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Apple Silicon specific optimizations
+accelerate>=0.20.0  # HuggingFace acceleration
+# mlx>=0.0.3  # Apple MLX framework (if available) 

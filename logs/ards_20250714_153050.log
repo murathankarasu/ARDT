@@ -1,0 +1,15 @@
+2025-07-14 15:30:50,568 - ARDS - INFO - ============================================================
+2025-07-14 15:30:50,569 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:30:50,569 - ARDS - INFO - ============================================================
+2025-07-14 15:30:50,684 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:30:50,684 - ARDS - INFO - 🧠 RAM: 8GB toplam, %70.2 kullanım
+2025-07-14 15:30:50,684 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:30:50,684 - ARDS - INFO - 💾 Sistem: CPU %21.2, RAM %70.2
+2025-07-14 15:30:50,689 - ARDS - INFO - Konfigürasyon yüklendi: configs/firebase_production.yaml
+2025-07-14 15:30:50,756 - ARDS - INFO - 📊 Firestore Analytics etkinleştirildi
+2025-07-14 15:30:50,756 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:30:58,185 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:30:58,185 - ARDS - INFO - ✅ Sistem hazır - Mod: mixed, Performans: adaptive
+2025-07-14 15:30:58,185 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:30:58,185 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:30:58,563 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %60.8

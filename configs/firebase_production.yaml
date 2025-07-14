@@ -1,0 +1,82 @@
+# ARDS Firebase Production Konfigürasyonu
+# Gerçek Firestore analytics için
+
+firebase:
+  # Mevcut Firebase Admin SDK servis hesabı anahtarı
+  credentials_path: "lorien-ards-firebase-adminsdk-fbsvc-86e3b5d895.json"
+  
+  # Firebase proje ID
+  project_id: "lorien-ards"
+  
+  # Firestore koleksiyon ayarları
+  collections:
+    sessions: "ards_sessions"
+    detections: "detections"
+    attention: "attention_data"
+    analytics: "analytics"
+  
+  # Batch işleme ayarları - optimize edilmiş
+  batch_settings:
+    max_batch_size: 15
+    flush_interval: 30  # 30 saniye
+    max_queue_size: 150
+    
+  # Performance optimizations
+  performance:
+    async_writes: true
+    compression: true
+    retry_attempts: 3
+    
+# Analytics ayarları
+analytics:
+  # İstatistik toplama etkin
+  enabled: true
+  
+  # Batch processing ayarları
+  batch_size: 10
+  upload_interval: 60  # 1 dakika
+  
+  # Detaylı metrikler
+  collect_detailed_metrics: true
+  attention_heatmaps: true
+  performance_tracking: true
+  
+  # Session tracking
+  session_analytics:
+    track_duration: true
+    track_fps: true
+    track_detection_counts: true
+    track_scene_changes: true
+    track_attention_patterns: true
+    
+  # Real-time statistics
+  real_time_stats:
+    enabled: true
+    update_interval: 10  # 10 saniye
+    metrics:
+      - "current_fps"
+      - "total_detections"
+      - "session_duration"
+      - "memory_usage"
+      - "cpu_usage"
+
+# Firestore güvenlik kuralları (production için)
+# Bu kuralları Firebase Console'da ayarlayın:
+#
+# rules_version = '2';
+# service cloud.firestore {
+#   match /databases/{database}/documents {
+#     match /ards_sessions/{sessionId} {
+#       allow read, write: if true;
+#       match /detections/{detectionId} {
+#         allow read, write: if true;
+#       }
+#       match /attention_data/{attentionId} {
+#         allow read, write: if true;
+#       }
+#       match /analytics/{analyticsId} {
+#         allow read, write: if true;
+#       }
+#     }
+#   }
+# } 

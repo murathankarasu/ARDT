@@ -1,0 +1,132 @@
+2025-07-14 15:45:37,243 - ARDS - INFO - ============================================================
+2025-07-14 15:45:37,243 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:45:37,243 - ARDS - INFO - ============================================================
+2025-07-14 15:45:37,357 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:45:37,357 - ARDS - INFO - 🧠 RAM: 8GB toplam, %70.4 kullanım
+2025-07-14 15:45:37,358 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:45:37,358 - ARDS - INFO - 💾 Sistem: CPU %15.9, RAM %70.4
+2025-07-14 15:45:37,367 - ARDS - INFO - Konfigürasyon yüklendi: configs/default.yaml
+2025-07-14 15:45:37,367 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:45:44,603 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:45:44,604 - ARDS - INFO - ✅ Sistem hazır - Mod: mixed, Performans: adaptive
+2025-07-14 15:45:44,604 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:45:44,604 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:45:45,213 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.2
+2025-07-14 15:45:46,353 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %21.7
+2025-07-14 15:45:47,487 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.0
+2025-07-14 15:45:48,649 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.2
+2025-07-14 15:45:49,820 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %23.2
+2025-07-14 15:45:50,984 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.6
+2025-07-14 15:45:52,119 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.3
+2025-07-14 15:45:53,252 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.1
+2025-07-14 15:45:54,383 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.1
+2025-07-14 15:45:55,518 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.9
+2025-07-14 15:45:56,649 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.7
+2025-07-14 15:45:57,785 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.6
+2025-07-14 15:45:58,919 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.0
+2025-07-14 15:46:00,082 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %39.3
+2025-07-14 15:46:01,213 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.7
+2025-07-14 15:46:02,349 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %12.0
+2025-07-14 15:46:03,479 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.0
+2025-07-14 15:46:04,609 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.6
+2025-07-14 15:46:05,747 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.8
+2025-07-14 15:46:06,914 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %20.9
+2025-07-14 15:46:08,046 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.3
+2025-07-14 15:46:09,177 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.6
+2025-07-14 15:46:10,311 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %24.4
+2025-07-14 15:46:11,475 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.5
+2025-07-14 15:46:12,611 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.8
+2025-07-14 15:46:13,744 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %39.5
+2025-07-14 15:46:14,878 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %31.3
+2025-07-14 15:46:16,009 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.9
+2025-07-14 15:46:17,142 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.0
+2025-07-14 15:46:18,271 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.9
+2025-07-14 15:46:19,408 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.9
+2025-07-14 15:46:20,538 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.6
+2025-07-14 15:46:21,671 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.0
+2025-07-14 15:46:22,804 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.3
+2025-07-14 15:46:23,938 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.3
+2025-07-14 15:46:25,069 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %20.5
+2025-07-14 15:46:26,203 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.6
+2025-07-14 15:46:27,367 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.8
+2025-07-14 15:46:28,503 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.2
+2025-07-14 15:46:29,634 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.2
+2025-07-14 15:46:30,768 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.3
+2025-07-14 15:46:31,900 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %21.3
+2025-07-14 15:46:33,036 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.5
+2025-07-14 15:46:34,167 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.4
+2025-07-14 15:46:35,302 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.3
+2025-07-14 15:46:36,429 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %21.5
+2025-07-14 15:46:37,565 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.3
+2025-07-14 15:46:38,699 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.1
+2025-07-14 15:46:39,830 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.1
+2025-07-14 15:46:40,966 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.7
+2025-07-14 15:46:42,133 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.0
+2025-07-14 15:46:43,266 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.2
+2025-07-14 15:46:44,400 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.9
+2025-07-14 15:46:45,528 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %31.3
+2025-07-14 15:46:46,677 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %71.8
+2025-07-14 15:46:47,862 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.0
+2025-07-14 15:46:48,996 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.1
+2025-07-14 15:46:50,129 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %23.5
+2025-07-14 15:46:51,262 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %19.8
+2025-07-14 15:46:52,397 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %24.7
+2025-07-14 15:46:53,527 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.1
+2025-07-14 15:46:54,657 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.7
+2025-07-14 15:46:55,792 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.3
+2025-07-14 15:46:56,927 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.3
+2025-07-14 15:46:58,060 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.5
+2025-07-14 15:46:59,194 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.4
+2025-07-14 15:47:00,322 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %48.8
+2025-07-14 15:47:01,455 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %31.0
+2025-07-14 15:47:02,588 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.8
+2025-07-14 15:47:03,724 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %11.0
+2025-07-14 15:47:04,851 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.5
+2025-07-14 15:47:05,985 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.2
+2025-07-14 15:47:07,121 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.9
+2025-07-14 15:47:08,256 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.7
+2025-07-14 15:47:09,385 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %34.2
+2025-07-14 15:47:10,519 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %36.6
+2025-07-14 15:47:11,654 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %21.3
+2025-07-14 15:47:12,787 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.7
+2025-07-14 15:47:13,921 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.7
+2025-07-14 15:47:15,050 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.3
+2025-07-14 15:47:16,184 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.5
+2025-07-14 15:47:17,317 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %12.7
+2025-07-14 15:47:18,449 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.1
+2025-07-14 15:47:19,583 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %34.9
+2025-07-14 15:47:20,713 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %16.0
+2025-07-14 15:47:21,866 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.8
+2025-07-14 15:47:22,983 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %14.1
+2025-07-14 15:47:24,112 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.7
+2025-07-14 15:47:25,279 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.6
+2025-07-14 15:47:26,415 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %13.3
+2025-07-14 15:47:27,582 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %15.5
+2025-07-14 15:47:28,749 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %37.0
+2025-07-14 15:47:29,879 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %32.1
+2025-07-14 15:47:31,014 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.4
+2025-07-14 15:47:32,140 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.9
+2025-07-14 15:47:33,278 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %30.0
+2025-07-14 15:47:34,410 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.4
+2025-07-14 15:47:35,544 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.8
+2025-07-14 15:47:36,678 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.9
+2025-07-14 15:47:37,810 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.0
+2025-07-14 15:47:38,943 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.1
+2025-07-14 15:47:40,075 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.4
+2025-07-14 15:47:41,227 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %31.6
+2025-07-14 15:47:42,339 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %58.7
+2025-07-14 15:47:43,474 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.6
+2025-07-14 15:47:44,604 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %41.0
+2025-07-14 15:47:45,738 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.4
+2025-07-14 15:47:46,870 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.9
+2025-07-14 15:47:48,005 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.2
+2025-07-14 15:47:49,140 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.4
+2025-07-14 15:47:50,269 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.8
+2025-07-14 15:47:51,399 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.3
+2025-07-14 15:47:52,538 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %30.9
+2025-07-14 15:47:53,700 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %30.0
+2025-07-14 15:47:54,835 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %61.4
+2025-07-14 15:47:56,001 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %55.4
+2025-07-14 15:47:57,134 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %47.5
+2025-07-14 15:47:57,164 - ARDS - INFO - 🛑 Kullanıcı tarafından durduruldu
+2025-07-14 15:47:57,164 - ARDS - INFO - 🧹 Sistem kapatılıyor...

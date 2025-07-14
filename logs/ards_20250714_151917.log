@@ -1,0 +1,30 @@
+2025-07-14 15:19:17,485 - ARDS - INFO - ============================================================
+2025-07-14 15:19:17,486 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:19:17,486 - ARDS - INFO - ============================================================
+2025-07-14 15:19:17,599 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:19:17,599 - ARDS - INFO - 🧠 RAM: 8GB toplam, %72.2 kullanım
+2025-07-14 15:19:17,599 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:19:17,599 - ARDS - INFO - 💾 Sistem: CPU %14.5, RAM %72.2
+2025-07-14 15:19:17,611 - ARDS - INFO - Konfigürasyon yüklendi: configs/medium_model.yaml
+2025-07-14 15:19:17,611 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:19:29,597 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:19:29,597 - ARDS - INFO - ✅ Sistem hazır - Mod: mixed, Performans: adaptive
+2025-07-14 15:19:29,598 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:19:29,598 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:19:29,910 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %60.0
+2025-07-14 15:19:31,034 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %26.3
+2025-07-14 15:19:32,166 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %23.8
+2025-07-14 15:19:33,302 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %23.2
+2025-07-14 15:19:34,432 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %36.7
+2025-07-14 15:19:35,001 - ARDS - ERROR - ❌ Kritik hata: 'method'
+2025-07-14 15:19:35,001 - ARDS - ERROR - Traceback (most recent call last):
+  File "/Users/murathan/ARDS/src/main.py", line 192, in main
+    'ai_method': ai_result['method'],
+KeyError: 'method'
+
+2025-07-14 15:19:35,001 - ARDS - INFO - 🧹 Sistem kapatılıyor...
+2025-07-14 15:19:35,464 - ARDS - INFO - 🎯 Performans Raporu:
+2025-07-14 15:19:35,464 - ARDS - INFO - 💾 Sistem: CPU %36.7, RAM %88.0
+2025-07-14 15:19:35,466 - ARDS - INFO - 🎮 Kamera: Target FPS: 30.0, Actual FPS: 1.0
+2025-07-14 15:19:35,467 - ARDS - INFO - 🧠 AI Sınıflandırıcı: Model: ModelComplexity.MEDIUM, Performans: {'model_complexity': 'medium', 'avg_inference_time_ms': 163.03885610480057, 'avg_memory_mb': 0, 'total_inferences': 19, 'loaded_models': ['clip_model', 'clip_processor', 'efficientnet', 'resnet'], 'device': 'mps'}
+2025-07-14 15:19:36,258 - ARDS - INFO - ✅ ARDS sistemi kapatıldı

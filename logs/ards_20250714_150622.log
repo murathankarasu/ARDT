@@ -1,0 +1,20 @@
+2025-07-14 15:06:22,933 - ARDS - INFO - ============================================================
+2025-07-14 15:06:22,933 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:06:22,933 - ARDS - INFO - ============================================================
+2025-07-14 15:06:23,054 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:06:23,054 - ARDS - INFO - 🧠 RAM: 8GB toplam, %80.6 kullanım
+2025-07-14 15:06:23,054 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:06:23,054 - ARDS - INFO - 💾 Sistem: CPU %16.9, RAM %80.5
+2025-07-14 15:06:23,071 - ARDS - INFO - Konfigürasyon yüklendi: configs/mobile.yaml
+2025-07-14 15:06:23,071 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:06:23,201 - ARDS - ERROR - ❌ Kritik hata: Kamera 0 açılamadı
+2025-07-14 15:06:23,208 - ARDS - ERROR - Traceback (most recent call last):
+  File "/Users/murathan/ARDS/src/main.py", line 92, in main
+    camera_manager = AdaptiveCamera(
+  File "/Users/murathan/ARDS/src/core/adaptive_camera.py", line 153, in __init__
+    self._initialize_camera()
+  File "/Users/murathan/ARDS/src/core/adaptive_camera.py", line 196, in _initialize_camera
+    raise RuntimeError(f"Kamera {self.camera_id} açılamadı")
+RuntimeError: Kamera 0 açılamadı
+
+2025-07-14 15:06:23,208 - ARDS - INFO - 🧹 Sistem kapatılıyor...

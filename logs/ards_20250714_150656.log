@@ -1,0 +1,27 @@
+2025-07-14 15:06:56,690 - ARDS - INFO - ============================================================
+2025-07-14 15:06:56,690 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:06:56,690 - ARDS - INFO - ============================================================
+2025-07-14 15:06:56,809 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:06:56,809 - ARDS - INFO - 🧠 RAM: 8GB toplam, %81.1 kullanım
+2025-07-14 15:06:56,810 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:06:56,810 - ARDS - INFO - 💾 Sistem: CPU %14.3, RAM %81.1
+2025-07-14 15:06:56,827 - ARDS - INFO - Konfigürasyon yüklendi: configs/mobile.yaml
+2025-07-14 15:06:56,827 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:07:37,197 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:07:37,198 - ARDS - INFO - ✅ Sistem hazır - Mod: street, Performans: adaptive
+2025-07-14 15:07:37,198 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:07:37,198 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:07:37,654 - ARDS - ERROR - ❌ Kritik hata: detect() got an unexpected keyword argument 'confidence_threshold'
+2025-07-14 15:07:37,655 - ARDS - ERROR - Traceback (most recent call last):
+  File "/Users/murathan/ARDS/src/main.py", line 174, in main
+    detections = detect_objects_adaptive(
+  File "/Users/murathan/ARDS/src/main.py", line 347, in detect_objects_adaptive
+    return detector.detect(frame, mode, confidence_threshold=0.4)
+TypeError: detect() got an unexpected keyword argument 'confidence_threshold'
+
+2025-07-14 15:07:37,655 - ARDS - INFO - 🧹 Sistem kapatılıyor...
+2025-07-14 15:07:37,837 - ARDS - INFO - 🎯 Performans Raporu:
+2025-07-14 15:07:37,837 - ARDS - INFO - 💾 Sistem: CPU %19.0, RAM %79.6
+2025-07-14 15:07:37,838 - ARDS - INFO - 🎮 Kamera: Target FPS: 15.0, Actual FPS: 1.0
+2025-07-14 15:07:37,838 - ARDS - INFO - 🧠 AI Sınıflandırıcı: Model: ModelComplexity.MEDIUM, Performans: {'avg_inference_time_ms': 0, 'avg_memory_mb': 0}
+2025-07-14 15:07:39,226 - ARDS - INFO - ✅ ARDS sistemi kapatıldı

@@ -1,0 +1,42 @@
+2025-07-14 15:27:17,255 - ARDS - INFO - ============================================================
+2025-07-14 15:27:17,255 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:27:17,255 - ARDS - INFO - ============================================================
+2025-07-14 15:27:17,370 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:27:17,370 - ARDS - INFO - 🧠 RAM: 8GB toplam, %69.8 kullanım
+2025-07-14 15:27:17,370 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:27:17,371 - ARDS - INFO - 💾 Sistem: CPU %12.3, RAM %69.8
+2025-07-14 15:27:17,376 - ARDS - INFO - Konfigürasyon yüklendi: configs/firebase_production.yaml
+2025-07-14 15:27:17,446 - ARDS - INFO - 📊 Firestore Analytics etkinleştirildi
+2025-07-14 15:27:17,446 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:27:25,128 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:27:25,128 - ARDS - INFO - ✅ Sistem hazır - Mod: mixed, Performans: adaptive
+2025-07-14 15:27:25,128 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:27:25,128 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:27:25,238 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.8
+2025-07-14 15:27:26,375 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %26.4
+2025-07-14 15:27:27,504 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %29.6
+2025-07-14 15:27:28,640 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %26.2
+2025-07-14 15:27:30,003 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.2
+2025-07-14 15:27:31,136 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.2
+2025-07-14 15:27:32,270 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %17.7
+2025-07-14 15:27:33,403 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %20.5
+2025-07-14 15:27:34,536 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %20.5
+2025-07-14 15:27:35,671 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %21.0
+2025-07-14 15:27:36,803 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %28.0
+2025-07-14 15:27:37,966 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %47.7
+2025-07-14 15:27:39,170 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %31.3
+2025-07-14 15:27:40,298 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %23.5
+2025-07-14 15:27:41,429 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %22.2
+2025-07-14 15:27:42,567 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %26.8
+2025-07-14 15:27:43,696 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %25.0
+2025-07-14 15:27:44,231 - ARDS - DEBUG - ⚠️ Yavaş frame: 18.712s
+2025-07-14 15:27:44,843 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %24.4
+2025-07-14 15:27:45,995 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %27.7
+2025-07-14 15:27:47,129 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %24.7
+2025-07-14 15:27:47,257 - ARDS - INFO - 🛑 Kullanıcı tarafından durduruldu
+2025-07-14 15:27:47,257 - ARDS - INFO - 🧹 Sistem kapatılıyor...
+2025-07-14 15:27:48,161 - ARDS - INFO - 🎯 Performans Raporu:
+2025-07-14 15:27:48,161 - ARDS - INFO - 💾 Sistem: CPU %24.7, RAM %88.5
+2025-07-14 15:27:48,162 - ARDS - INFO - 🎮 Kamera: Target FPS: 30.0, Actual FPS: 3.0
+2025-07-14 15:27:48,162 - ARDS - INFO - 🧠 AI Sınıflandırıcı: Model: ModelComplexity.MEDIUM, Performans: {'model_complexity': 'medium', 'avg_inference_time_ms': 88.20498704910278, 'avg_memory_mb': 0, 'total_inferences': 208, 'loaded_models': ['clip_model', 'clip_processor', 'efficientnet', 'resnet'], 'device': 'mps'}
+2025-07-14 15:27:49,312 - ARDS - INFO - ✅ ARDS sistemi kapatıldı

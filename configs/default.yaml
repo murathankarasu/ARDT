@@ -1,0 +1,144 @@
+# ARDS - Kaynak Dostu Konfigürasyon
+
+# Kamera ayarları
+camera:
+  device_id: 0
+  resolution:
+    width: 1280
+    height: 720
+  fps: 30
+  auto_exposure: true
+  
+  # Adaptif kamera ayarları
+  adaptive_mode: true
+  scene_analysis_interval: 0.5  # saniye
+  quality_threshold: 0.7
+
+# Nesne tespit ayarları
+detection:
+  # Hafif YOLO modeli (varsayılan nano)
+  model_path: "models/pretrained/yolov8n.pt"
+  confidence_threshold: 0.5
+  iou_threshold: 0.5
+  
+  # Sokak tespit ayarları
+  street_config:
+    text_model_path: "models/pretrained/east_text_detection.pb"
+    sign_detection_enabled: true
+    billboard_detection_enabled: true
+    
+  # Mağaza tespit ayarları
+  store_config:
+    shelf_detection_enabled: true
+    product_category_detection_enabled: true
+    price_tag_detection_enabled: true
+
+# AI Sınıflandırıcı ayarları - Optimize edilmiş
+ai_classifier:
+  # Hafif CLIP modeli (1.7GB yerine 600MB)
+  clip_model: "openai/clip-vit-base-patch32"
+  
+  # Device ayarları
+  device: "auto"  # "cuda", "cpu", "auto"
+  
+  # Ensemble ağırlıkları (hafif modeller için optimize)
+  ensemble_weights:
+    clip: 0.6
+    efficientnet: 0.4
+    resnet: 0.0  # ResNet devre dışı (kaynak tasarrufu)
+  
+  # Güven eşikleri
+  confidence_thresholds:
+    minimum: 0.3
+    high: 0.7
+    
+  # Kaynak optimizasyonu
+  resource_optimization:
+    half_precision: true  # FP16 kullan (GPU memory tasarrufu)
+    batch_size: 1  # Tek tek işle (memory tasarrufu)
+    max_image_size: 224  # Küçük görüntü boyutu
+
+# Dikkat analizi ayarları
+attention:
+  max_faces: 3
+  detection_confidence: 0.5
+  tracking_confidence: 0.5
+  gaze_estimation_method: "mediapipe"
+  
+  # Bakış noktası tahmini
+  gaze_projection:
+    scale_factor: 300
+    smoothing_factor: 0.7
+
+# Dikkat analizi ayarları
+attention_analysis:
+  attention_radius: 50
+  confidence_threshold: 0.3
+  temporal_smoothing: 0.7
+  max_history_length: 30
+
+# İşleme ayarları - Memory optimized
+processing:
+  # Görüntü işleme
+  image_preprocessing:
+    blur_kernel_size: 3
+    noise_reduction: true
+    auto_enhance: true
+    
+  # Performans ayarları (azaltıldı)
+  threading:
+    detection_threads: 1  # Azaltıldı (memory tasarrufu)
+    processing_threads: 1
+  
+  # Çıktı ayarları
+  output:
+    save_detections: false
+    save_annotated_frames: false
+    output_directory: "output/"
+
+# Firebase ayarları (opsiyonel)
+firebase:
+  enabled: false
+  credentials_path: ""
+  project_id: ""
+  
+  # Koleksiyon isimleri
+  collections:
+    sessions: "ards_sessions"
+    detections: "detections"
+    attention: "attention_data"
+    analytics: "analytics"
+  
+  # Batch ayarları
+  batch_settings:
+    max_batch_size: 10
+    flush_interval: 30
+    max_queue_size: 100
+
+# Logging ayarları
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_directory: "logs/"
+  max_log_files: 10
+
+# Performans optimizasyonu - Kaynak dostu
+performance:
+  # GPU kullanımı
+  use_gpu: true
+  gpu_memory_limit: 0.6  # VRAM'ın %60'ını kullan (azaltıldı)
+  
+  # Thread sayıları (azaltıldı)
+  worker_threads: 2
+  
+  # Cache ayarları (azaltıldı)
+  cache_size: 50
+  
+  # FPS limiti
+  max_fps: 30
+  
+  # Memory monitoring
+  memory_monitoring:
+    enabled: true
+    max_memory_usage: 0.8  # RAM'in %80'i
+    cleanup_interval: 60  # 60 saniye 

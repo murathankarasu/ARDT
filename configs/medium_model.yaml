@@ -1,0 +1,169 @@
+# ARDS - 3GB Orta Model + Kamera Optimize Konfigürasyonu
+# Orta performans donanım için (8-16GB RAM, mid-range GPU)
+# Hedef: Kalite-performans dengesi + Stabil kamera
+
+# Kamera ayarları - Yanıp sönme optimizasyonu
+camera:
+  device_id: 0
+  
+  # Stabil çözünürlük ve FPS (yanıp sönme önleme)
+  resolution:
+    width: 1920   # Full HD kalite
+    height: 1080
+  fps: 25  # Biraz düşük FPS - kamera stabilite için
+  buffer_size: 3  # Daha büyük buffer - smooth görüntü
+  
+  # Kamera stabilite ayarları
+  auto_exposure: false  # Manuel exposure - yanıp sönme önleme
+  manual_exposure: 0.4  # Sabit exposure değeri
+  auto_white_balance: false  # Manuel white balance
+  manual_white_balance: 4600  # Gündüz ışığı dengesi
+  
+  # Adaptif kamera ayarları (optimize)
+  adaptive_mode: true
+  scene_analysis_interval: 1.0  # Daha yavaş değişim - smooth geçiş
+  quality_threshold: 0.75
+  
+  # Yanıp sönme önleme parametreleri
+  stabilization:
+    brightness_smoothing: 0.8  # Parlaklık yumuşatma
+    contrast_smoothing: 0.7    # Kontrast yumuşatma
+    transition_speed: 0.3      # Yavaş geçişler
+    min_change_threshold: 0.1  # Küçük değişiklikleri yoksay
+
+# Nesne tespit ayarları - Orta model için optimize
+detection:
+  # Orta seviye YOLO modeli
+  model_path: "models/pretrained/yolov8s.pt"  # Small model
+  confidence_threshold: 0.4  # Biraz daha düşük threshold - daha fazla tespit
+  iou_threshold: 0.5
+  
+  # Sokak tespit ayarları  
+  street_config:
+    text_model_path: ""  # EAST modeli geçici olarak devre dışı
+    sign_detection_enabled: false  # Text detection olmadan kapalı
+    billboard_detection_enabled: true
+    street_light_detection: true
+    
+  # Mağaza tespit ayarları
+  store_config:
+    shelf_detection_enabled: true
+    product_category_detection_enabled: true
+    price_tag_detection_enabled: true
+    product_recognition: true
+
+# AI Sınıflandırıcı ayarları - 3GB MEDIUM model zorla
+ai_classifier:
+  # MEDIUM karmaşıklık zorla (3GB model)
+  force_model_complexity: "medium"
+  auto_select_model: false  # Otomatik seçimi kapat
+  
+  # MEDIUM modeldeki modeller:
+  # - CLIP: openai/clip-vit-base-patch32 (~1.5GB)
+  # - EfficientNet: efficientnet_b2 (~500MB)  
+  # - ResNet: resnet34 (~1GB)
+  # Toplam: ~3GB
+  
+  models:
+    clip_enabled: true
+    efficientnet_enabled: true
+    resnet_enabled: true  # ResNet'i de etkinleştir
+  
+  # Device ayarları
+  device: "auto"  # auto/cuda/mps/cpu
+  
+  # MEDIUM model için ensemble ağırlıkları
+  ensemble_weights:
+    clip: 0.4      # CLIP ağırlığı
+    efficientnet: 0.4  # EfficientNet ağırlığı  
+    resnet: 0.2    # ResNet ağırlığı
+  
+  # Güven eşikleri (orta model için optimize)
+  confidence_thresholds:
+    minimum: 0.25  # Daha düşük minimum threshold
+    high: 0.8      # Yüksek güven threshold
+    
+  # Kaynak optimizasyonu - orta model için
+  resource_optimization:
+    half_precision: true  # FP16 kullan (GPU memory tasarrufu)
+    batch_size: 2  # Batch processing etkin
+    max_image_size: 224  # Standart görüntü boyutu
+    enable_caching: true  # Model output cache
+
+# Dikkat analizi ayarları - Gelişmiş
+attention:
+  max_faces: 5  # Daha fazla yüz takip
+  detection_confidence: 0.4  # Daha hassas tespit
+  tracking_confidence: 0.4
+  gaze_estimation_method: "mediapipe"
+  
+  # Gelişmiş bakış noktası tahmini
+  gaze_projection:
+    scale_factor: 250
+    smoothing_factor: 0.8  # Daha yumuşak geçişler
+    depth_estimation: true  # Derinlik tahmini
+
+# Dikkat analizi ayarları - Gelişmiş
+attention_analysis:
+  attention_radius: 60
+  confidence_threshold: 0.25  # Daha hassas
+  temporal_smoothing: 0.8
+  max_history_length: 50  # Daha uzun geçmiş
+  
+  # Gelişmiş analiz
+  heatmap_enabled: true
+  attention_tracking: true
+  focus_duration_analysis: true
+
+# İşleme ayarları - Orta model için optimize
+processing:
+  # Thread ayarları
+  worker_threads: 4  # 4 thread
+  max_queue_size: 10
+  
+  # GPU optimizasyonu
+  gpu_optimization:
+    enable_tensorrt: false  # TensorRT kapalı (uyumluluk için)
+    memory_growth: true     # Dynamic GPU memory
+    mixed_precision: true   # Mixed precision training
+  
+  # Frame processing
+  frame_processing:
+    skip_frame_threshold: 0.95  # Düşük threshold - daha az frame skip
+    quality_check: true
+    motion_detection: true
+    scene_classification: true
+
+# Firebase analytics - Detaylı
+firebase:
+  enabled: false  # İhtiyaç halinde aktif et
+  batch_size: 20  # Daha büyük batch
+  upload_interval: 60  # 1 dakika
+  
+  # Detaylı metrikler
+  detailed_metrics: true
+  attention_heatmaps: true
+  performance_tracking: true
+
+# Logging ayarları
+logging:
+  level: "INFO"
+  file_logging: true
+  console_logging: true
+  
+  # Performans logging
+  performance_logging: true
+  fps_logging: true
+  memory_logging: true
+
+# Performans hedefleri
+performance_targets:
+  target_fps: 25  # Hedef FPS
+  max_memory_usage: 6144  # 6GB RAM limit
+  max_gpu_memory: 4096    # 4GB GPU limit
+  
+  # Uyarı eşikleri
+  warning_thresholds:
+    cpu_usage: 80
+    memory_usage: 85
+    gpu_memory: 90 

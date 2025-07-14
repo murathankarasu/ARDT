@@ -1,0 +1,28 @@
+2025-07-14 15:44:13,046 - ARDS - INFO - ============================================================
+2025-07-14 15:44:13,046 - ARDS - INFO - 🚀 ARDS - AI Tabanlı Mikro Düzey Yer Tanıma Sistemi (Optimize)
+2025-07-14 15:44:13,046 - ARDS - INFO - ============================================================
+2025-07-14 15:44:13,164 - ARDS - INFO - 💻 CPU: 8 çekirdek, %0.0 kullanım
+2025-07-14 15:44:13,165 - ARDS - INFO - 🧠 RAM: 8GB toplam, %72.3 kullanım
+2025-07-14 15:44:13,165 - ARDS - WARNING - ⚠️ GPU bulunamadı - CPU modunda çalışıyor
+2025-07-14 15:44:13,165 - ARDS - INFO - 💾 Sistem: CPU %8.4, RAM %72.3
+2025-07-14 15:44:13,176 - ARDS - INFO - Konfigürasyon yüklendi: configs/default.yaml
+2025-07-14 15:44:13,177 - ARDS - INFO - 🔧 Sistem bileşenleri başlatılıyor...
+2025-07-14 15:44:20,941 - ARDS - WARNING - ⚠️ Gaze tracking devre dışı - düşük memory
+2025-07-14 15:44:20,941 - ARDS - INFO - ✅ Sistem hazır - Mod: mixed, Performans: adaptive
+2025-07-14 15:44:20,941 - ARDS - INFO - 📹 Kamera başlatıldı - Çıkış için 'q' tuşuna basın
+2025-07-14 15:44:20,941 - ARDS - INFO - 🔧 Kontroller: 's'=screenshot, 'i'=info, 'p'=performance toggle
+2025-07-14 15:44:20,971 - ARDS - ERROR - ❌ Kritik hata: module 'cv2' has no attribute 'COLOR_BGR2BGR'
+2025-07-14 15:44:20,984 - ARDS - ERROR - Traceback (most recent call last):
+  File "/Users/murathan/ARDS/src/main.py", line 144, in main
+    frame = camera_manager.get_frame()
+  File "/Users/murathan/ARDS/src/core/adaptive_camera.py", line 285, in get_frame
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2BGR)  # Renk formatını garanti et
+AttributeError: module 'cv2' has no attribute 'COLOR_BGR2BGR'
+
+2025-07-14 15:44:20,984 - ARDS - INFO - 🧹 Sistem kapatılıyor...
+2025-07-14 15:44:21,034 - ARDS - WARNING - ⚠️ Yüksek kaynak kullanımı: CPU %18.5
+2025-07-14 15:44:22,076 - ARDS - INFO - 🎯 Performans Raporu:
+2025-07-14 15:44:22,076 - ARDS - INFO - 💾 Sistem: CPU %18.5, RAM %84.9
+2025-07-14 15:44:22,076 - ARDS - INFO - 🎮 Kamera: Target FPS: 15.0, Actual FPS: 0.0
+2025-07-14 15:44:22,077 - ARDS - INFO - 🧠 AI Sınıflandırıcı: Model: ModelComplexity.MEDIUM, Performans: {'avg_inference_time_ms': 0, 'avg_memory_mb': 0}
+2025-07-14 15:44:23,697 - ARDS - INFO - ✅ ARDS sistemi kapatıldı

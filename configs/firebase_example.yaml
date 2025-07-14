@@ -1,0 +1,49 @@
+# Firebase Konfigürasyonu Örneği
+# Bu dosyayı kopyalayarak firebase.yaml oluşturun
+
+firebase:
+  # Firebase Admin SDK servis hesabı anahtarı yolu
+  # Firebase Console > Project Settings > Service Accounts > Generate new private key
+  credentials_path: "path/to/your/firebase-service-account-key.json"
+  
+  # Firebase proje ID'niz
+  project_id: "your-firebase-project-id"
+  
+  # Firestore koleksiyon ayarları (opsiyonel)
+  collections:
+    sessions: "ards_sessions"
+    detections: "detections"
+    attention: "attention_data"
+    analytics: "analytics"
+  
+  # Batch işleme ayarları
+  batch_settings:
+    max_batch_size: 10
+    flush_interval: 30  # saniye
+    max_queue_size: 100
+
+# Firestore Kuralları Örneği:
+# rules_version = '2';
+# service cloud.firestore {
+#   match /databases/{database}/documents {
+#     match /ards_sessions/{sessionId} {
+#       allow read, write: if true; // Güvenlik kurallarınızı güncelleyin
+#       match /detections/{detectionId} {
+#         allow read, write: if true;
+#       }
+#       match /attention_data/{attentionId} {
+#         allow read, write: if true;
+#       }
+#       match /analytics/{analyticsId} {
+#         allow read, write: if true;
+#       }
+#     }
+#   }
+# }
+
+# Firebase Kurulum Adımları:
+# 1. Firebase Console'da yeni proje oluşturun
+# 2. Firestore Database'i etkinleştirin
+# 3. Project Settings > Service Accounts > Generate new private key
+# 4. İndirilen JSON dosyasını güvenli bir yere kaydedin
+# 5. Bu dosyadaki yolları güncelleyin 

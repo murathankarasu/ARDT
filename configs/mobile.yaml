@@ -1,0 +1,253 @@
+# ARDS - Ultra Düşük Sistem Konfigürasyonu
+# 2-4GB RAM, eski CPU, GPU olmayan sistemler için optimize
+# Hedef: Maksimum performans/kaynak oranı
+
+# Kamera ayarları - Ultra hafif
+camera:
+  # Çok düşük çözünürlük ve FPS (maksimum kaynak tasarrufu)
+  default_resolution: [480, 360]  # 480p - çok hafif
+  default_fps: 10  # Çok düşük FPS - pil/CPU tasarrufu
+  buffer_size: 1  # Minimum buffer
+  auto_exposure: true
+  auto_white_balance: true
+  
+  # Adaptif kamera tamamen devre dışı
+  adaptive_enabled: false
+  
+  # Tüm post-processing kapalı
+  post_processing:
+    enabled: false
+    clahe_enabled: false
+    noise_reduction: false
+    sharpening: false
+
+# Nesne tespiti - Sadece YOLO Nano
+detection:
+  # Tek model - maksimum hız
+  enabled_detectors: ["yolo_nano"]
+  
+  # YOLO Nano ayarları - ultra optimize
+  yolo:
+    model_variant: "yolov8n"  # En hafif model
+    confidence_threshold: 0.7  # Yüksek threshold - az CPU kullanımı
+    nms_threshold: 0.6
+    max_detections: 3  # Maksimum 3 nesne (düşük işlem)
+    input_size: [320, 320]  # Küçük boyut
+    half_precision: false  # CPU için FP32 (uyumluluk)
+    
+  # Diğer detector'lar tamamen kapalı
+  mediapipe:
+    enabled: false
+  
+  dlib:
+    enabled: false
+
+# AI Sınıflandırıcı - Minimum
+ai_classifier:
+  # Otomatik model seçimi kapalı
+  auto_select_model: false
+  
+  # NANO modu zorla
+  force_model_complexity: "nano"
+  
+  # Sadece en hafif model
+  models:
+    clip_enabled: false  # CLIP tamamen kapalı
+    efficientnet_enabled: true
+    resnet_enabled: false
+    
+  # EfficientNet LITE - en hafif sürüm
+  efficientnet:
+    model_name: "efficientnet_lite0"
+    input_size: [96, 96]  # Çok küçük boyut
+    batch_size: 1
+    half_precision: false  # CPU uyumluluğu
+    
+  # Ensemble tamamen kapalı
+  ensemble:
+    enabled: false
+
+# Dikkat takibi - Tamamen devre dışı
+attention:
+  # Tüm attention tracking kapalı
+  gaze_tracking:
+    enabled: false
+    
+  mediapipe:
+    enabled: false
+    
+  attention_analysis:
+    enabled: false
+
+# Analytics - Minimal
+analytics:
+  # Büyük batch'ler - daha az ağ trafiği
+  batch_size: 50
+  upload_interval: 600  # 10 dakika - çok az upload
+  
+  # Detaylı metrikler kapalı
+  collect_detailed_metrics: false
+  
+  # Firebase optimizasyonu
+  firebase:
+    offline_cache: true
+    compression: true
+    
+# Performans optimizasyonu - Ultra düşük sistem
+performance:
+  # Sistem izleme - çok seyrek
+  system_monitoring:
+    enabled: true
+    interval: 5.0  # 5 saniye - çok seyrek
+    
+  # CPU optimizasyonu - minimum
+  cpu:
+    max_threads: 1  # Tek thread
+    priority: "low"  # Düşük öncelik
+    affinity: [0]   # Tek CPU core
+    
+  # Memory optimizasyonu - agresif
+  memory:
+    cache_size: 5  # Çok küçük cache
+    garbage_collection: "immediate"  # Anında temizlik
+    clear_interval: 30  # 30 saniye
+    max_memory_mb: 512  # 512MB limit
+    
+  # GPU devre dışı
+  gpu:
+    enabled: false
+    
+  # Frame işleme - ultra hafif
+  frame_processing:
+    # Çok fazla frame atlama
+    skip_frames: true
+    skip_ratio: 0.8  # %80 frame atla
+    
+    # Adaptif quality çok düşük
+    adaptive_quality: true
+    quality_step: 0.2
+    min_quality: 0.05  # Çok düşük kalite
+    max_quality: 0.3   # Orta kalite max
+    
+    # Kısa timeout
+    processing_timeout: 0.05  # 50ms max
+
+# İşlem yoğunluğu - Minimum
+processing_intensity:
+  # Çok düşük varsayılan
+  default: 0.1
+  
+  # Otomatik ayarlama agresif
+  auto_adjust: true
+  adjustment_interval: 10.0
+  
+  # Çok düşük threshold'lar
+  low_threshold: 0.05
+  medium_threshold: 0.2
+  high_threshold: 0.4
+  
+  # Pil durumu kritik
+  battery_mode:
+    enabled: true
+    low_battery_threshold: 30  # %30 altında power save
+    critical_battery_threshold: 15  # %15 altında emergency
+    
+# Güç yönetimi - Maksimum tasarruf
+power_management:
+  # Pil optimizasyonu maksimum
+  battery_optimization: true
+  
+  # CPU throttling agresif
+  cpu_throttling:
+    enabled: true
+    max_usage: 40  # %40 max CPU
+    sleep_interval: 0.1  # Frequent sleep
+    
+  # Thermal management agresif
+  thermal_management:
+    enabled: true
+    max_temperature: 65  # 65°C max (düşük)
+    cooling_period: 30  # 30s cooldown
+    throttle_factor: 0.5  # %50 throttle
+    
+  # Idle optimization çok hızlı
+  idle_optimization:
+    enabled: true
+    idle_timeout: 10  # 10s boşta kalırsa durdur
+    deep_sleep: true
+    
+# Logging - Minimal
+logging:
+  level: "ERROR"  # Sadece hatalar
+  file_logging: false  # Dosyaya kaydetme
+  console_only: false  # Console bile kapalı
+  
+  # Tüm logging'ler kapalı
+  performance_logging: false
+  debug_logging: false
+  
+# Debugging - Tamamen kapalı
+debug:
+  enabled: false
+  visualization: false
+  save_frames: false
+  profiling: false
+
+# Düşük sistem özel ayarlar
+low_end_system:
+  # Ekran/UI minimal
+  ui:
+    show_fps: false
+    show_detections: true  # Sadece temel gösterim
+    show_confidence: false
+    minimal_display: true
+  
+  # Network ultra düşük
+  network:
+    timeout: 30  # Uzun timeout
+    retry_count: 1  # Tek deneme
+    low_bandwidth_mode: true
+    data_compression: true
+    offline_mode: true  # Mümkünse offline
+    
+  # Background mode - emergency
+  background_mode:
+    enabled: true
+    ultra_reduced_processing: true
+    emergency_mode: true
+    
+# Donanım gereksinimleri - Ultra minimum
+hardware_requirements:
+  min_ram_gb: 1  # 1GB minimum
+  min_cpu_cores: 1
+  min_cpu_freq_ghz: 1.0
+  min_storage_gb: 0.5
+  recommended_ram_gb: 2
+  recommended_cpu_cores: 2
+  recommended_storage_gb: 1
+  
+# Uyumluluk - Eski sistemler
+compatibility:
+  old_android: true
+  raspberry_pi_zero: true
+  embedded_systems: true
+  single_board_computers: true
+  legacy_hardware: true
+
+# Otomatik optimizasyon
+auto_optimization:
+  # Sistem kaynaklarını izle ve otomatik ayarla
+  enabled: true
+  check_interval: 30  # 30 saniye
+  
+  # Kritik durumlarda otomatik düşürme
+  emergency_fallback:
+    enabled: true
+    memory_threshold: 0.9  # %90 RAM
+    cpu_threshold: 0.8     # %80 CPU
+    
+  # Adaptif kalite ayarlama
+  adaptive_quality:
+    enabled: true
+    target_fps: 5  # Hedef 5 FPS
+    min_fps: 2     # Minimum 2 FPS 
