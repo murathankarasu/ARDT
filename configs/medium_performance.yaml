@@ -1,0 +1,212 @@
+# ARDS - Medium Performance Configuration
+# Optimized for medium-spec hardware with enhanced object attention tracking
+# Target: 8-16GB RAM, mid-range CPU/GPU
+
+# Kamera ayarları - Stable performance
+camera:
+  device_id: 0
+  resolution:
+    width: 1280
+    height: 720
+  fps: 25
+  auto_exposure: true
+  
+  # Adaptif kamera ayarları
+  adaptive_mode: true
+  scene_analysis_interval: 0.8
+  quality_threshold: 0.65
+
+# Nesne tespit ayarları - Medium complexity
+detection:
+  model_path: "models/pretrained/yolov8n.pt"
+  confidence_threshold: 0.45  # Düşürülmüş threshold - daha fazla tespit
+  iou_threshold: 0.5
+  
+  # Sokak tespit ayarları  
+  street_config:
+    text_model_path: "models/pretrained/east_text_detection.pb"
+    sign_detection_enabled: true
+    billboard_detection_enabled: true
+    text_detection_enabled: false
+    
+  # Mağaza tespit ayarları
+  store_config:
+    shelf_detection_enabled: true
+    product_category_detection_enabled: true
+    price_tag_detection_enabled: true
+
+# AI Sınıflandırıcı - Balanced
+ai_classifier:
+  clip_model: "openai/clip-vit-base-patch32"
+  device: "auto"
+  
+  ensemble_weights:
+    clip: 0.7
+    efficientnet: 0.3
+    resnet: 0.0
+  
+  confidence_thresholds:
+    minimum: 0.25  # Düşürüldü
+    high: 0.6
+    
+  resource_optimization:
+    half_precision: true
+    batch_size: 1
+    max_image_size: 224
+
+# Enhanced Attention Tracking - MEDIUM PERFORMANCE OPTIMIZED
+attention:
+  max_faces: 2  # 2 yüz max
+  detection_confidence: 0.4  # Düşürüldü
+  tracking_confidence: 0.4   # Düşürüldü
+  gaze_estimation_method: "mediapipe"
+  
+  # Bakış noktası tahmini - Enhanced
+  gaze_projection:
+    scale_factor: 350
+    smoothing_factor: 0.6
+    
+  # Performance thresholds - MEDIUM için optimize
+  performance_thresholds:
+    min_processing_intensity: 0.3  # Medium'da çalışacak şekilde düşük
+    gaze_tracking_threshold: 0.4   # Medium'da aktif
+    attention_analysis_threshold: 0.35
+    
+  # Enhanced tracking settings
+  enhanced_tracking:
+    object_persistence_seconds: 5.0
+    attention_radius: 60
+    min_attention_duration: 0.2
+    focus_transition_smoothing: 0.7
+
+# Dikkat analizi - Enhanced for medium
+attention_analysis:
+  attention_radius: 60
+  confidence_threshold: 0.25  # Düşürüldü
+  temporal_smoothing: 0.6
+  max_history_length: 40
+  
+  # Object tracking enhancement
+  object_tracking:
+    enable_interaction_events: true
+    enable_attention_duration: true
+    enable_focus_transitions: true
+    max_tracked_objects: 15
+
+# İşleme ayarları - Medium optimized
+processing:
+  # Performance settings
+  threading:
+    detection_threads: 2
+    processing_threads: 2
+  
+  # Frame processing - Medium için optimize
+  frame_processing:
+    processing_intensity_default: 0.6  # Medium başlangıç
+    min_intensity: 0.3
+    max_intensity: 0.9
+    
+    # Threshold'lar - Medium için düşürülmüş
+    ai_processing_threshold: 0.3      # AI her 8 frame'de bir
+    attention_processing_threshold: 0.4  # Attention her 3 frame'de bir
+    analytics_frequency: 30            # Analytics her 30 frame'de bir
+    
+  # Cache ayarları
+  cache_size: 75
+  
+  # FPS targets
+  target_fps: 25
+  min_fps: 15
+
+# Firebase ayarları - ENHANCED for detailed tracking
+firebase:
+  enabled: true
+  credentials_path: "lorien-ards-firebase-adminsdk-fbsvc-86e3b5d895.json"
+  project_id: "lorien-ards"
+  
+  # Enhanced collections for detailed tracking
+  collections:
+    sessions: "ards_sessions"
+    detections: "detections" 
+    attention: "attention_data"
+    object_attention: "object_attention_logs"
+    detailed_attention: "detailed_attention_events"
+    gaze_vectors: "gaze_vectors"
+    interaction_events: "interaction_events"
+    session_snapshots: "session_snapshots"
+    session_reports: "session_reports"
+    comprehensive_session_states: "comprehensive_states"
+    real_time_analytics: "real_time_analytics"
+    analytics: "analytics"
+  
+  # Optimized batch settings for medium performance
+  batch_settings:
+    max_batch_size: 20
+    flush_interval: 15  # 15 saniye - sık flush
+    max_queue_size: 200
+    
+  # Enhanced analytics settings
+  analytics:
+    track_object_attention: true
+    track_gaze_vectors: true
+    track_attention_duration: true
+    track_interaction_events: true
+    detailed_logging: true
+    real_time_analytics: true
+    
+    # Logging frequencies (optimized for medium)
+    object_attention_frequency: 30    # Her 30 frame
+    gaze_vector_frequency: 60         # Her 60 frame  
+    interaction_event_frequency: 1    # Her interaction
+    real_time_frequency: 15           # Her 15 frame
+    comprehensive_state_frequency: 300 # Her 300 frame (5 dakika)
+
+# Logging ayarları - Enhanced
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_directory: "logs/"
+  max_log_files: 15
+  
+  # Enhanced logging
+  detailed_logging: true
+  performance_logging: true
+  attention_logging: true
+  interaction_logging: true
+
+# Performans hedefleri - Medium hardware
+performance:
+  use_gpu: true
+  gpu_memory_limit: 0.7  # 70% GPU memory
+  
+  worker_threads: 3
+  cache_size: 75
+  max_fps: 25
+  
+  # Memory monitoring - Enhanced
+  memory_monitoring:
+    enabled: true
+    max_memory_usage: 0.75  # 75% RAM
+    cleanup_interval: 45
+    
+  # Performance targets
+  targets:
+    min_fps: 15
+    target_fps: 25
+    max_memory_gb: 12
+    max_cpu_percent: 80
+    
+  # Thresholds for medium performance
+  thresholds:
+    # Lower thresholds for medium hardware
+    attention_tracking_threshold: 0.4   # Medium'da çalışır
+    ai_classification_threshold: 0.3    # Medium'da çalışır
+    gaze_vector_threshold: 0.35         # Medium'da çalışır
+    
+    # Memory thresholds
+    memory_warning: 70
+    memory_critical: 85
+    
+    # CPU thresholds  
+    cpu_warning: 75
+    cpu_critical: 90 

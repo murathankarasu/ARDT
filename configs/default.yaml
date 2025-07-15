@@ -23,9 +23,10 @@ detection:
   
   # Sokak tespit ayarları
   street_config:
-    text_model_path: "models/pretrained/east_text_detection.pb"
+    text_model_path: "models/pretrained/east_text_detection.pb"  # İsteğe bağlı - yoksa skip edilir
     sign_detection_enabled: true
     billboard_detection_enabled: true
+    text_detection_enabled: false  # Model yoksa devre dışı
     
   # Mağaza tespit ayarları
   store_config:
@@ -46,6 +47,42 @@ ai_classifier:
     clip: 0.6
     efficientnet: 0.4
     resnet: 0.0  # ResNet devre dışı (kaynak tasarrufu)
+
+# 3D Gaze Processing ayarları
+gaze_3d:
+  depth_scale: 100.0
+  collision_threshold: 30.0  # Çakışma mesafesi threshold (pixel)
+  max_gaze_objects: 10  # Maksimum aynı anda gösterilen 3D gaze objesi
+  
+  # Derinlik tahmini parametreleri
+  depth_estimation:
+    base_depth: 200.0
+    vector_depth_scale: 300.0
+    center_depth_scale: 100.0
+    min_depth: 50.0
+    max_depth: 1000.0
+
+# Görselleştirme ayarları
+visualization:
+  # 3D Gaze gösterimi
+  show_3d_gaze: true
+  show_collisions: true
+  show_gaze_trail: true
+  show_depth_info: true
+  
+  # Animasyon ayarları
+  animation_enabled: true
+  pulse_speed: 3.0
+  fade_duration: 2.0
+  
+  # Trail ayarları
+  trail_max_length: 20
+  trail_duration: 3.0  # saniye
+  
+  # Çakışma görselleştirme
+  collision_pulse_speed: 6.0
+  collision_highlight_size: 20
+  collision_info_display: true
   
   # Güven eşikleri
   confidence_thresholds:
@@ -96,24 +133,35 @@ processing:
     save_annotated_frames: false
     output_directory: "output/"
 
-# Firebase ayarları (opsiyonel)
+# Firebase ayarları (production ready)
 firebase:
-  enabled: false
-  credentials_path: ""
-  project_id: ""
+  enabled: true
+  credentials_path: "lorien-ards-firebase-adminsdk-fbsvc-86e3b5d895.json"
+  project_id: "lorien-ards"
   
-  # Koleksiyon isimleri
+  # Koleksiyon isimleri - structured
   collections:
     sessions: "ards_sessions"
     detections: "detections"
     attention: "attention_data"
+    object_attention: "object_attention_logs"
+    detailed_attention: "detailed_attention_events"
+    session_snapshots: "session_snapshots"
+    session_reports: "session_reports"
     analytics: "analytics"
   
-  # Batch ayarları
+  # Batch ayarları - optimized for medium performance
   batch_settings:
-    max_batch_size: 10
-    flush_interval: 30
-    max_queue_size: 100
+    max_batch_size: 15
+    flush_interval: 20  # Daha sık flush - 20 saniye
+    max_queue_size: 150
+    
+  # Enhanced analytics
+  analytics:
+    track_object_attention: true
+    track_gaze_vectors: true
+    track_attention_duration: true
+    detailed_logging: true
 
 # Logging ayarları
 logging:

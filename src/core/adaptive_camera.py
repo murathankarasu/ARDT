@@ -345,7 +345,7 @@ class AdaptiveCamera:
             
         except Exception as e:
             self.logger.warning(f"Post-processing hatası: {e}")
-            return frame
+        return frame
     
     def _resource_monitor_loop(self):
         """Sistem kaynaklarını izleme döngüsü"""

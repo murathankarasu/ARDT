@@ -76,8 +76,8 @@ class ObjectDetector:
             # Durum bazlı mod seçimi
             effective_mode = self._determine_effective_mode(mode, gaze_available)
             
-            # Genel YOLO tespiti - M2 GPU ile
-            results = self.model(frame, conf=self.confidence_threshold, device=self.device)
+            # Genel YOLO tespiti - M2 GPU ile (sessiz mod)
+            results = self.model(frame, conf=self.confidence_threshold, device=self.device, verbose=False)
             
             for result in results:
                 boxes = result.boxes
