@@ -13,6 +13,22 @@ from .depth_estimation import AdvancedDepthEstimator
 from .gaze_calculation import Enhanced3DGazeCalculator
 from .collision_detection import CollisionDetector, CollisionManager
 
+# Gelişmiş kafa pozisyonu ve bakış analizi
+from .enhanced_head_pose import (
+    Enhanced3DHeadPoseEstimator,
+    Enhanced3DGazeEstimator,
+    HeadPose3D,
+    GazeVector3D
+)
+
+# Gerçek 3D çakışma tespiti
+from .true_3d_collision_detection import (
+    True3DCollisionDetector,
+    Collision3DEvent,
+    CollisionAnalytics3D,
+    GazeGeometryAnalyzer
+)
+
 __all__ = [
     'GazeTracker',
     'AttentionAnalyzer',
@@ -23,5 +39,13 @@ __all__ = [
     'AdvancedDepthEstimator',
     'Enhanced3DGazeCalculator',
     'CollisionDetector',
-    'CollisionManager'
+    'CollisionManager',
+    'Enhanced3DHeadPoseEstimator',
+    'Enhanced3DGazeEstimator',
+    'HeadPose3D',
+    'GazeVector3D',
+    'True3DCollisionDetector',
+    'Collision3DEvent',
+    'CollisionAnalytics3D',
+    'GazeGeometryAnalyzer'
 ] 
